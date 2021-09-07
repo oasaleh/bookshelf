@@ -1,10 +1,14 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Route, Switch, Link } from 'react-router-dom';
+import styled from 'styled-components';
 import * as BooksAPI from './BooksAPI';
 import Header from './components/Header';
 import LibraryView from './pages/LibraryView';
 import SearchPage from './pages/SearchPage';
 
+const View = styled.div`
+  padding: 25px 40px;
+`;
 function App() {
   const [loading, setLoadeding] = useState(true);
   const [allBooks, setAllBooks] = useState([]);
@@ -25,7 +29,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <View className="App">
       <Header />
       <div>
         {!loading ? (
@@ -47,7 +51,7 @@ function App() {
           </Switch>
         ) : null}
       </div>
-    </div>
+    </View>
   );
 }
 
