@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import * as BooksAPI from '../BooksAPI';
 import BookShelf from '../components/BookShelf';
-import BookCard from '../components/BookCard';
 
 /* ---------------------------------- style --------------------------------- */
 const SubHeader = styled.div`
@@ -47,7 +46,6 @@ const Search = ({ allBooks, setAllBooks, updateShelf }) => {
   const [searchField, setSearchField] = useState('');
 
   function isBookInLibrary(libraryBooks, searchResults) {
-    // console.log('searchResults', searchResults);
     const refinedSearchResults = searchResults;
     if (!searchResults.error) {
       searchResults.forEach((book) => {
@@ -56,7 +54,6 @@ const Search = ({ allBooks, setAllBooks, updateShelf }) => {
             refinedSearchResults.find(
               (newBook) => newBook.id === myBook.id,
             ).shelf = myBook.shelf;
-            // console.log('hi');
           }
         });
       });
@@ -67,9 +64,7 @@ const Search = ({ allBooks, setAllBooks, updateShelf }) => {
   const searchBooks = useCallback(async () => {
     const unrefinedSearechResults = await BooksAPI.search(searchField);
     const searchResults = isBookInLibrary(allBooks, unrefinedSearechResults);
-    // console.log(searchResults);
     setBooks(searchResults);
-    // console.log(searechResults);
   }, [searchField]);
 
   function handleChange(e) {

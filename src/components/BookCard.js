@@ -3,7 +3,6 @@ import * as BooksAPI from '../BooksAPI';
 
 /* ---------------------------------- style --------------------------------- */
 const BookCardDiv = styled.div`
-  /* margin: 0 10px; */
   padding: 5px;
   width: 130px;
   height: 250px;
@@ -13,7 +12,6 @@ const ImageFrame = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* height: 240px; */
   padding: 5px 2px;
 `;
 const Image = styled.img`
