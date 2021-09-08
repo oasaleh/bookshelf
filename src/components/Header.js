@@ -30,7 +30,7 @@ const Header = () => (
     <h1>Bookshelf</h1>
     <Link to="/search">
       <AddButton type="button">
-        <span>📕📗📘📙</span>
+        <span>📘</span>
       </AddButton>
     </Link>
   </HeaderDiv>

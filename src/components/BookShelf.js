@@ -20,7 +20,7 @@ const ShelfName = styled.div`
   font-weight: 500;
   width: fit-content;
   & > h3 {
-    border-bottom: 0.5px solid #8b949e;
+    /* border-bottom: 0.5px solid #8b949e; */
   }
 `;
 const BookTray = styled.div`

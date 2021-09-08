@@ -36,20 +36,12 @@ const Search = ({ allBooks, setAllBooks, updateShelf }) => {
 
   function handleChange(e) {
     setSearchField(e.target.value);
-    // console.log(e.target.value);
   }
-  // const getBooks = useCallback(async () => {
-  //   const newBooks = await BooksAPI.getAll();
-  //   setAllBooks(newBooks);
-  // }, []);
 
   useEffect(() => {
     if (searchField) {
       searchBooks();
     }
-    // if (!allBooks) {
-    //   getBooks();
-    // }
   }, [searchField]);
 
   return (
@@ -76,8 +68,8 @@ const Search = ({ allBooks, setAllBooks, updateShelf }) => {
               title="Search Results"
               books={books}
               updateShelf={updateShelf}
+              emoji="🔍"
             />
-            // console.log(books.map((book) => book.imageLinks))
           );
         })()}
       </div>

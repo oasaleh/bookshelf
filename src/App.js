@@ -9,6 +9,8 @@ import SearchPage from './pages/SearchPage';
 /* ---------------------------------- style --------------------------------- */
 const View = styled.div`
   padding: 25px 40px;
+  max-width: 900px;
+  margin: auto;
 `;
 /* -------------------------------- component ------------------------------- */
 
