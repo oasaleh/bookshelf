@@ -16,9 +16,6 @@ const AddButton = styled.button`
   margin-bottom: 2px;
   padding-bottom: 0px;
   padding-top: 0px;
-  /* margin-right: 30px;
-  padding-right: 50px; */
-  /* position: absolute; */
   background-color: #ffffff;
   :hover {
     background-color: #f2f3f4;
