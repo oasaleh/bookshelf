@@ -30,10 +30,11 @@ const BookTray = styled.div`
   justify-content: center;
   align-items: baseline;
   gap: 22px;
-  margin-top: 8px;
-  padding-top: 30px;
+  /* margin-top: 8px; */
+  padding: 30px 0px;
   background-color: #f2f3f4;
   border-radius: 5px;
+  margin: auto;
 `;
 /* -------------------------------- component ------------------------------- */
 const BookShelf = ({ emoji, title, books, updateShelf }) =>

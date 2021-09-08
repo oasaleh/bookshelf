@@ -81,15 +81,6 @@ const Search = ({ allBooks, setAllBooks, updateShelf }) => {
           );
         })()}
       </div>
-      <button type="button">
-        <Link
-          to={{
-            pathname: '/search',
-          }}
-        >
-          +
-        </Link>
-      </button>
     </div>
   );
 };

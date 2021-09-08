@@ -1,6 +1,3 @@
-import { useState, useEffect, useCallback } from 'react';
-import { Link } from 'react-router-dom';
-import * as BooksAPI from '../BooksAPI';
 import BookShelf from '../components/BookShelf';
 
 const LibraryView = ({ allBooks, setAllBooks, updateShelf }) => (
@@ -25,13 +22,7 @@ const LibraryView = ({ allBooks, setAllBooks, updateShelf }) => (
         updateShelf={updateShelf}
       />
     </div>
-
-    <Link to="/search">
-      <button type="button">+</button>
-    </Link>
   </div>
 );
-
-// LibraryView.propTypes = {};
 
 export default LibraryView;
