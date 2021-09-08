@@ -6,9 +6,12 @@ import Header from './components/Header';
 import LibraryView from './pages/LibraryView';
 import SearchPage from './pages/SearchPage';
 
+/* ---------------------------------- style --------------------------------- */
 const View = styled.div`
   padding: 25px 40px;
 `;
+/* -------------------------------- component ------------------------------- */
+
 function App() {
   const [loading, setLoadeding] = useState(true);
   const [allBooks, setAllBooks] = useState([]);

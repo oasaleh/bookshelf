@@ -9,11 +9,19 @@ const BookShelfDiv = styled.div`
   padding: 10px 50px;
   /* border: 0.5px solid #dddee0; */
 `;
-const ShelfName = styled.h3`
+const ShelfName = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   font-size: 1.1rem;
   font-weight: 500;
   width: fit-content;
-  border-bottom: 0.5px solid #8b949e;
+  & > h3 {
+    border-bottom: 0.5px solid #8b949e;
+  }
 `;
 const BookTray = styled.div`
   display: flex;
@@ -28,10 +36,13 @@ const BookTray = styled.div`
   border-radius: 5px;
 `;
 /* -------------------------------- component ------------------------------- */
-const BookShelf = ({ title, books, updateShelf }) =>
+const BookShelf = ({ emoji, title, books, updateShelf }) =>
   books || books.length ? (
     <BookShelfDiv>
-      <ShelfName>{title}</ShelfName>
+      <ShelfName>
+        <span style={{ fontSize: '30px' }}>{emoji}</span>
+        <h3>{title}</h3>
+      </ShelfName>
       <BookTray id="tray">
         {books.map((book) => (
           <BookCard bookInfo={book} updateShelf={updateShelf} key={book.id} />
