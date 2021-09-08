@@ -5,7 +5,7 @@ import BookCard from './BookCard';
 /* ---------------------------------- style --------------------------------- */
 const BookShelfDiv = styled.div`
   /* width: 100vw; */
-  margin: 20px 0px;
+  /* margin: 20px 0px; */
   padding: 10px 50px;
   /* border: 0.5px solid #dddee0; */
 `;
