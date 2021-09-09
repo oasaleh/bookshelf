@@ -39,13 +39,6 @@ function App() {
       <div>
         {!loading ? (
           <Switch>
-            <Route exact path="/">
-              <LibraryView
-                allBooks={allBooks}
-                setAllBooks={setAllBooks}
-                updateShelf={updateShelf}
-              />
-            </Route>
             <Route exact path="/search">
               <SearchPage
                 allBooks={allBooks}
@@ -53,8 +46,17 @@ function App() {
                 updateShelf={updateShelf}
               />
             </Route>
+            <Route path="/">
+              <LibraryView
+                allBooks={allBooks}
+                setAllBooks={setAllBooks}
+                updateShelf={updateShelf}
+              />
+            </Route>
           </Switch>
-        ) : null}
+        ) : (
+          <p>Loading!</p>
+        )}
       </div>
     </View>
   );

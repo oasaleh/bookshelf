@@ -50,7 +50,7 @@ const BookCard = ({ bookInfo, updateShelf }) => {
   // Some of the books do not have this property - I learned this the hard way...
   let imgUrl = '';
   if (bookInfo.imageLinks && bookInfo.imageLinks.thumbnail) {
-    imgUrl = bookInfo.imageLinks.thumbnail;
+    imgUrl = bookInfo.imageLinks.thumbnail.replace(/^http\/\//i, 'https');
   }
   return (
     <BookCardDiv>
